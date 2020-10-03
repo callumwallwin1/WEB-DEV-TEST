@@ -4,5 +4,5 @@
 
 * Aidan Ross (2002378)
 * Callum Wallwin
-* James Mcgregor
+* James Mcgregor (2005445)
 * Mark Sanders
