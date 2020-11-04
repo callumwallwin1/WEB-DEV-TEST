@@ -1,0 +1,18 @@
+{
+  "name": "cm2104-group-webapp-unibondz",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build:css": "tailwind build src/main.css -o public/css/style.css"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "tailwindcss": "^1.9.5"
+  }
+}
