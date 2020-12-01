@@ -26,7 +26,7 @@ function createPokemonCard(pokemon) {
     const pokemonInnnerHTML = `
         <div class="mr-2">
             <span>
-                <img class="h-12"
+                <img class="h-12" loading="lazy"
                 src="${pokemon.sprites.front_default}">
             </span>
         </div>
