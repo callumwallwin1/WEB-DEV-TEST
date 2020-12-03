@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/customcss.css">
 </head>
-<body class="">
+<body>
     <main class="flex">
-        <section class="bg-gray-300 lg:h-screen px-8 py-6 hidden lg:flex flex-col justify-center menu">
+        <section class="bg-gray-300 h-screen px-8 py-6 hidden lg:flex flex-col justify-center menu z-50 w-screen sm:w-auto">
             <img class="h-16 mb-12 px-10" src="img/pokebuilder.png" alt="Pokebuilder Logo">
 
-            <button class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold" type="button"><a href="teams.html">All Teams</a></button>
+            <button class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold w-full" type="button"><a href="teams.html">All Teams</a></button>
             <div class="flex justify-between mb-8">
                 <button class="bg-white text-gray-800 rounded mr-4 py-2 px-4 w-40 font-semibold border border-blue-400" type="button">Login</button>
                 <button class="rounded py-2 px-4 w-40 font-semibold bg-blue-400 text-white" type="button">Sign Up</button>
@@ -28,24 +28,24 @@
                 </div>
             </div>
         </section>
-        <section class="bg-hero-img lg:h-screen w-full flex justify-center p-0 xl:p-16">
+        <section class="bg-hero-img lg:h-screen flex-1 flex justify-center p-0 xl:p-16 relative">
             <button class="hideMenuBtn">
                 <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46.5 23.8573C46.5 36.7643 36.1955 47.2146 23.5 47.2146C10.8045 47.2146 0.5 36.7643 0.5 23.8573C0.5 10.9503 10.8045 0.5 23.5 0.5C36.1955 0.5 46.5 10.9503 46.5 23.8573Z" fill="white" stroke="#4299E1"/>
                     <path d="M24.724 16.3907L17.1146 24L24.724 31.6093L26.6093 29.724L20.8853 24L26.6093 18.276L24.724 16.3907Z" fill="#4299E1"/>
                 </svg>
             </button>
-            <div class="bg-gray-300 mx-auto rounded p-8">
+            <div class="bg-gray-300 mx-auto rounded p-8 w-full lg:w-auto">
                 <div class="mb-8">
                     <form>
-                        <label class="text-2xl font-bold block mb-4" for="team_name">Team Name</label>
-                        <input class="rounded px-4 py-1 mr-2 w-64" type="text" name="team_name" id="" placeholder="Team Name...">
-                        <button class="text-white bg-green-500 px-4 py-1 rounded" type="submit">Submit</button>
+                        <label class="text-2xl font-bold block mb-4 text-center lg:text-left" for="team_name">Team Name</label>
+                        <input class="rounded px-4 py-1 mr-2 w-full mb-2 lg:w-64 lg:mb-0" type="text" name="team_name" id="" placeholder="Team Name...">
+                        <button class="text-white bg-green-500 px-4 py-1 rounded w-full lg:w-auto" type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-4 teamPicker">
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-4 teamPicker">
                     <div class="bg-green-200 free relative">
-                        <button class="closeBtn absolute z-50 right-0">
+                        <button class="closeBtn absolute z-40 right-0">
                             <span>
                                 <svg width="25" height="25" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M46.5 23.8573C46.5 36.7643 36.1955 47.2146 23.5 47.2146C10.8045 47.2146 0.5 36.7643 0.5 23.8573C0.5 10.9503 10.8045 0.5 23.5 0.5C36.1955 0.5 46.5 10.9503 46.5 23.8573Z" fill="white" stroke="#FF0000"/>
@@ -54,7 +54,7 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t z-10">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2">
@@ -113,12 +113,12 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
                             </div>
-                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto lg:w-56 h-56 items-center justify-center rounded-t">
                                 <div class="pokeStats flex w-full">
                                     <div class="w-full p-2">
                                         <p class="hpStat text-xs">HP:</p>
@@ -149,7 +149,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2">
@@ -172,12 +172,12 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
                             </div>
-                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto lg:w-56 h-56 items-center justify-center rounded-t">
                                 <div class="pokeStats flex w-full">
                                     <div class="w-full p-2">
                                         <p class="hpStat text-xs">HP:</p>
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2">
@@ -231,12 +231,12 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
                             </div>
-                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto lg:w-56 h-56 items-center justify-center rounded-t">
                                 <div class="pokeStats flex w-full">
                                     <div class="w-full p-2">
                                         <p class="hpStat text-xs">HP:</p>
@@ -267,7 +267,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2">
@@ -290,12 +290,12 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
                             </div>
-                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto lg:w-56 h-56 items-center justify-center rounded-t">
                                 <div class="pokeStats flex w-full">
                                     <div class="w-full p-2">
                                         <p class="hpStat text-xs">HP:</p>
@@ -326,7 +326,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2 statBtn">
@@ -349,12 +349,12 @@
                             </span>
                         </button>
                         <div class="relative">    
-                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                            <div class="bg-gray-200 w-auto lg:w-56 h-56 flex items-center justify-center rounded-t">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
                                 </div>
                             </div>
-                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto lg:w-56 h-56 items-center justify-center rounded-t">
                                 <div class="pokeStats flex w-full">
                                     <div class="w-full p-2">
                                         <p class="hpStat text-xs">HP:</p>
@@ -385,7 +385,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                        <div class="pokeInfo w-auto lg:w-56 bg-white flex p-2 relative rounded-b">
                             <p class="mr-2">#??</p>
                             <h3>??????</h3>
                             <button class="absolute right-2">

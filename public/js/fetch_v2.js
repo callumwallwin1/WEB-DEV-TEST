@@ -62,14 +62,15 @@ const selectPokemonData = async (id) => {
 // Take advanced data from selectPokemonData and use it to modify cards
 const addPokemonToTeam = (pokeman) => {
     // Take type array and create comma spaced string
-    const type = pokeman.types.map( (type) => type.type.name).join(`, `);
+    const type = pokeman.types;
+    // const type = pokeman.types.map( (type) => type.type.name).join(` `);
     // Set image as url from data
     const image = pokeman.sprites[`front_default`];
     // Set ID as ID from data
     const id = pokeman.id;
     // Set name as name from data and uppercase the string
     const name = pokeman.name[0].toUpperCase() + pokeman.name.slice(1);
-    console.log(type)
+    console.log(type[0].type.name);
     // Send data to populate stats card
     setStats(pokeman)
     

@@ -30,3 +30,14 @@
 .spdBar{
     width: var(--spdSize);
 }
+
+.hideMenuBtn{
+    position: absolute;
+    top: 2.5%;
+    left: 5%;
+}
+
+.closeBtn{
+    top: -5px;
+    right: -5px;
+}
