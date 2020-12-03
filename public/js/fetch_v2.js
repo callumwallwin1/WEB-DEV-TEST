@@ -1,8 +1,8 @@
 const poke_container = document.getElementById('poke_container');
-const pokemon_number = 800;
+const pokemon_number = 898;
 
 const pokemonFetch = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon/?limit=800`;
+    const url = `https://pokeapi.co/api/v2/pokemon/?limit=${pokemon_number}`;
     const res = await fetch(url);
     const data = await res.json();
     const pokemon = data.results.map( (result, index) => ({
@@ -54,37 +54,140 @@ const addPokemonToTeam = (pokeman) => {
     const image = pokeman.sprites[`front_default`];
     const id = pokeman.id;
     const name = pokeman.name[0].toUpperCase() + pokeman.name.slice(1);
+
+    setStats(pokeman)
+    
+    const slot = $(".teamPicker .free").first();
+    const figure = slot.find("img");
+    const idTag = slot.find(".pokeInfo p")
+    const titleTag = slot.find(".pokeInfo h3")
+
+    
+    idTag.text(`#${id}`)
+    titleTag.text(name)
+    figure.attr("src", image);
+    slot.removeClass("free");
+    // const htmlString =  
+
+}
+
+const setStats = (pokeman) => {
+    const slot = $(".teamPicker .free").first();
     const hp = pokeman.stats[0].base_stat;
     const atk = pokeman.stats[1].base_stat;
     const def = pokeman.stats[2].base_stat;
     const spAtk = pokeman.stats[3].base_stat;
     const spDef = pokeman.stats[4].base_stat;
     const spd = pokeman.stats[5].base_stat;
-    console.log(hp);
-    
-    const slot = $(".teamPicker .free").first();
-    const figure = slot.find("img");
-    const idTag = slot.find(".pokeInfo p")
-    const titleTag = slot.find(".pokeInfo h3")
+
     const hpTag = slot.find(".pokeStats .hpStat");
     const atkTag = slot.find(".pokeStats .atkStat");
     const defTag = slot.find(".pokeStats .defStat");
     const spAtkTag = slot.find(".pokeStats .spAtkStat");
     const spDefTag = slot.find(".pokeStats .spDefStat");
     const spdTag = slot.find(".pokeStats .spdStat");
-
     
-    idTag.text(`#${id}`)
-    titleTag.text(name)
-    figure.attr("src", image);
+    const hpBar = slot.find(".statCard .hpBar")
+    const atkBar = slot.find(".statCard .atkBar")
+    const defBar = slot.find(".statCard .defBar")
+    const spAtkBar = slot.find(".statCard .spAtkBar")
+    const spDefBar = slot.find(".statCard .spDefBar")
+    const spdBar = slot.find(".statCard .spdBar")
+    
     hpTag.text(`HP: ${hp}`);
     atkTag.text(`ATK: ${atk}`);
-    defTag.text(`ATK: ${def}`);
-    spAtkTag.text(`ATK: ${spAtk}`);
-    spDefTag.text(`ATK: ${spDef}`);
-    spdTag.text(`ATK: ${spd}`);
+    defTag.text(`DEF: ${def}`);
+    spAtkTag.text(`SP.ATK: ${spAtk}`);
+    spDefTag.text(`SP.DEF: ${spDef}`);
+    spdTag.text(`SPD: ${spd}`);
+
+    hpBar.css("width", `${calcStat(hp)}%`);
+    atkBar.css("width", `${calcStat(atk)}%`);
+    defBar.css("width", `${calcStat(def)}%`);
+    spAtkBar.css("width", `${calcStat(spAtk)}%`);
+    spDefBar.css("width", `${calcStat(spDef)}%`);
+    spdBar.css("width", `${calcStat(spd)}%`);
+}
+
+const calcStat = (val) => {
+    return val * 0.3922;
+}
+
+const removePokemon = ($this) => {
+
+    const figure = $this.find("img");
+    const idTag = $this.find(".pokeInfo p")
+    const titleTag = $this.find(".pokeInfo h3")
+
+    const hpBar = $this.find(".statCard .hpBar")
+    const atkBar = $this.find(".statCard .atkBar")
+    const defBar = $this.find(".statCard .defBar")
+    const spAtkBar = $this.find(".statCard .spAtkBar")
+    const spDefBar = $this.find(".statCard .spDefBar")
+    const spdBar = $this.find(".statCard .spdBar")
+   
+    const hpTag = $this.find(".pokeStats .hpStat");
+    const atkTag = $this.find(".pokeStats .atkStat");
+    const defTag = $this.find(".pokeStats .defStat");
+    const spAtkTag = $this.find(".pokeStats .spAtkStat");
+    const spDefTag = $this.find(".pokeStats .spDefStat");
+    const spdTag = $this.find(".pokeStats .spdStat");
+
+    $this.addClass("free");
+    figure.attr("src", "img/unown.png");
+    idTag.text(`#??`);
+    titleTag.text(`??????`)
+    
+    hpTag.text(`HP:`);
+    atkTag.text(`ATK:`);
+    defTag.text(`DEF:`);
+    spAtkTag.text(`SP.ATK:`);
+    spDefTag.text(`SP.DEF:`);
+    spdTag.text(`SPD:`);
+
+    hpBar.css("width", "0");
+    atkBar.css("width", "0");
+    defBar.css("width", "0");
+    spAtkBar.css("width", "0");
+    spDefBar.css("width", "0");
+    spdBar.css("width", "0");
+
     slot.removeClass("free");
-    // const htmlString =  
+    // var $div = $this.find(".info");
+    // $figure.find(".art").attr("class", "art");
+    // $figure.attr("title", "");
+    // $figure.attr("class", "unknown");
+    // $div.attr("class", "info unknown");
+    // $div.find(".name").text("???");
+    // $div.find(".type").attr("class", "type unknown");
+    // // send empty slot to last place
+    // $("ul.picked").append($this);
+
+}
+
+const resetStats = () => {
+
 }
 
 pokemonFetch();
+
+function searchPokemon() {
+    // Declare variables
+      let input, filter, poke_container, pokemon_items, a, i, txtValue;
+      input = document.getElementById('search_input');
+      filter = input.value.toUpperCase();
+      poke_container = document.getElementById("poke_container");
+      pokemon_items = poke_container.querySelectorAll('.pokemon');
+    
+    // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < pokemon_items.length; i++) {
+        a = pokemon_items[i].getElementsByTagName("h3")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            pokemon_items[i].style.display = "";
+        } else {
+            pokemon_items[i].style.display = "none";
+        }
+      }
+}
+

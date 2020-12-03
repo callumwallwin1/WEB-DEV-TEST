@@ -1,0 +1,32 @@
+:root {
+    --hpSize: 0%;
+    --atkSize: 0%;
+    --defSize: 0%;
+    --spAtkSize: 0%;
+    --spDefSize: 0%;
+    --spdSize: 0%;
+}
+
+.hpBar{
+    width: var(--hpSize);
+}
+
+.atkBar{
+    width: var(--atkSize);
+}
+
+.defBar{
+    width: var(--defSize);
+}
+
+.spAtkBar{
+    width: var(--spAtkSize);
+}
+
+.spDefBar{
+    width: var(--spDefSize);
+}
+
+.spdBar{
+    width: var(--spdSize);
+}
