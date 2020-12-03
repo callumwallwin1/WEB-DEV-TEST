@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="">
-    <main class="flex h-screen">
-        <section class="bg-gray-300 h-screen px-8 py-6 flex flex-col align-center">
+    <main class="flex">
+        <section class="bg-gray-300 h-screen px-8 py-6 hidden lg:flex flex-col align-center">
             <img class="h-16 mb-12 px-10" src="img/pokebuilder.png" alt="Pokebuilder Logo">
 
             <button class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold" type="button"><a href="teams.html">All Teams</a></button>
@@ -37,9 +37,208 @@
                         <button class="text-white bg-green-500 px-4 py-1 rounded" type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="flex flex-col items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-4 teamPicker">
+                    <div class="bg-green-200 free relative">
+                        <div class="absolute z-50 right-0">
+                            <button>
+                                <span>
+                                    <svg width="25" height="25" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.5 23.8573C46.5 36.7643 36.1955 47.2146 23.5 47.2146C10.8045 47.2146 0.5 36.7643 0.5 23.8573C0.5 10.9503 10.8045 0.5 23.5 0.5C36.1955 0.5 46.5 10.9503 46.5 23.8573Z" fill="white" stroke="#FF0000"/>
+                                        <path d="M25.41 23.3497L29.71 18.9945C29.8983 18.8033 30.0041 18.544 30.0041 18.2737C30.0041 18.0033 29.8983 17.744 29.71 17.5529C29.5217 17.3617 29.2663 17.2543 29 17.2543C28.7337 17.2543 28.4783 17.3617 28.29 17.5529L24 21.9182L19.71 17.5529C19.5217 17.3617 19.2663 17.2543 19 17.2543C18.7337 17.2543 18.4783 17.3617 18.29 17.5529C18.1017 17.744 17.9959 18.0033 17.9959 18.2737C17.9959 18.544 18.1017 18.8033 18.29 18.9945L22.59 23.3497L18.29 27.7049C18.1963 27.7993 18.1219 27.9116 18.0711 28.0353C18.0203 28.159 17.9942 28.2917 17.9942 28.4257C17.9942 28.5597 18.0203 28.6924 18.0711 28.8161C18.1219 28.9398 18.1963 29.0521 18.29 29.1465C18.383 29.2417 18.4936 29.3172 18.6154 29.3687C18.7373 29.4203 18.868 29.4468 19 29.4468C19.132 29.4468 19.2627 29.4203 19.3846 29.3687C19.5064 29.3172 19.617 29.2417 19.71 29.1465L24 24.7811L28.29 29.1465C28.383 29.2417 28.4936 29.3172 28.6154 29.3687C28.7373 29.4203 28.868 29.4468 29 29.4468C29.132 29.4468 29.2627 29.4203 29.3846 29.3687C29.5064 29.3172 29.617 29.2417 29.71 29.1465C29.8037 29.0521 29.8781 28.9398 29.9289 28.8161C29.9797 28.6924 30.0058 28.5597 30.0058 28.4257C30.0058 28.2917 29.9797 28.159 29.9289 28.0353C29.8781 27.9116 29.8037 27.7993 29.71 27.7049L25.41 23.3497Z" fill="#FF0000"/>
+                                    </svg>   
+                                </span>
+                            </button>
+                        </div>
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 free">
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 free">
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 free">
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 free">
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2 statBtn">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-green-200 free">
+                        <div class="relative">    
+                            <div class="bg-gray-200 w-auto md:w-56 h-56 flex items-center justify-center rounded-t">
+                                <div class="bg-white rounded-full">
+                                    <img src="img/unown.png" alt="">
+                                </div>
+                            </div>
+                            <div class="statCard inset-0 absolute hidden bg-gray-200 w-auto md:w-56 h-56 items-center justify-center rounded-t">
+                                <div class="pokeStats">
+                                    <p class="hpStat">HP:</p>
+                                    <p class="atkStat">ATK:</p>
+                                    <p class="defStat">DEF:</p>
+                                    <p class="spAtkStat">SP.ATK:</p>
+                                    <p class="spDefStat">SP.DEF:</p>
+                                    <p class="spdStat">SPD:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pokeInfo w-auto md:w-56 bg-white flex p-2 relative rounded-b">
+                            <p class="mr-2">#??</p>
+                            <h3>??????</h3>
+                            <button class="absolute right-2">
+                                <span>
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>
+                                        <path d="M10.4219 8.085C10.4219 8.37528 10.5355 8.65368 10.7377 8.85894C10.9398 9.0642 11.2141 9.17951 11.5 9.17951C11.7859 9.17951 12.0602 9.0642 12.2623 8.85894C12.4645 8.65368 12.5781 8.37528 12.5781 8.085C12.5781 7.79471 12.4645 7.51632 12.2623 7.31106C12.0602 7.10579 11.7859 6.99048 11.5 6.99048C11.2141 6.99048 10.9398 7.10579 10.7377 7.31106C10.5355 7.51632 10.4219 7.79471 10.4219 8.085ZM12.0391 10.6389H10.9609C10.8621 10.6389 10.7812 10.721 10.7812 10.8213V17.0236C10.7812 17.1239 10.8621 17.206 10.9609 17.206H12.0391C12.1379 17.206 12.2188 17.1239 12.2188 17.0236V10.8213C12.2188 10.721 12.1379 10.6389 12.0391 10.6389Z" fill="#929292"/>
+                                    </svg>                                    
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="flex flex-col items-center">
                     <div class="flex">
-                        <div class="mr-8 mb-12">
+                        <div class="mr-8 mb-12 free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
@@ -58,7 +257,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="mr-8">
+                        <div class="mr-8  free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
@@ -77,7 +276,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="">
+                        <div class=" free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
@@ -99,7 +298,7 @@
                     </div>
 
                     <div class="flex">
-                        <div class="mr-8">
+                        <div class="mr-8 free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
@@ -118,7 +317,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="mr-8">
+                        <div class="mr-8 free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full">
                                     <img src="img/unown.png" alt="">
@@ -137,7 +336,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="">
+                        <div class="free">
                             <div class="bg-gray-200 w-56 h-56 flex items-center justify-center">
                                 <div class="bg-white rounded-full unknwn">
                                     <img src="img/unown.png" alt="">
@@ -157,12 +356,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <!-- <script src="js/script-test.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/fetch.js"></script> -->
+    <script src="js/fetch_v2.js"></script>
+    <script src="js/interaction.js"></script>
 </body>
 </html>
