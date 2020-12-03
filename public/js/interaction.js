@@ -10,4 +10,8 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    $(".hideMenuBtn").click(function() {
+        $(".menu").toggle();
+    });
+
   });
