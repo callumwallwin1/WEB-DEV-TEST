@@ -10,16 +10,16 @@
 <body>
     <main class="flex">
         <section class="bg-gray-300 h-screen px-8 py-6 hidden lg:flex flex-col justify-center menu z-50 w-screen lg:w-auto fixed inset-y-0 lg:relative">
-            <img class="h-16 mb-12 px-10 mx-auto" src="img/pokebuilder.png" alt="Pokebuilder Logo">
+            <a href="index.html"><img class="h-16 mb-12 px-10 mx-auto" src="img/pokebuilder.png" alt="Pokebuilder Logo"></a>
 
-            <button class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold w-full" type="button"><a href="teams.html">All Teams</a></button>
+            <a href="teams.html" class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold w-full text-center" type="button" aria-label="Visit all teams page">All Teams</a>
             <div class="flex justify-between mb-8">
-                <button class="bg-white text-gray-800 rounded mr-4 py-2 px-4 w-1/2 font-semibold border border-blue-400" type="button">Login</button>
-                <button class="rounded py-2 px-4 w-1/2 font-semibold bg-blue-400 text-white" type="button">Sign Up</button>
+                <a href="login.html" class="bg-white text-gray-800 rounded mr-4 py-2 px-4 w-1/2 font-semibold border border-blue-400 text-center" type="button" aria-label="Login page">Login</a>
+                <a href="signup.html" class="rounded py-2 px-4 w-1/2 font-semibold bg-blue-400 text-white text-center" type="button" aria-label="Sign up page">Sign Up</a>
             </div>
 
             <form class="mb-8">
-                <input id="search_input" class="w-full rounded py-1 px-4" type="text" placeholder="Search Pokemon..." onkeyup="searchPokemon()">
+                <input id="search_input" class="w-full rounded py-1 px-4" type="text" placeholder="Search Pokemon..." onkeyup="searchPokemon()" aria-label="Search pokemon name here">
             </form>
 
             <div class="h-full overflow-y-scroll bg-gray-400 rounded p-4">
