@@ -71,8 +71,8 @@ const selectPokemonData = async (id) => {
 // Take advanced data from selectPokemonData and use it to modify cards
 const addPokemonToTeam = (pokeman) => {
     // Take type array and create comma spaced string
-    // const type = pokeman.types;
-    const type = pokeman.types.map( (type) => type.type.name).join(` `);
+    const type = pokeman.types;
+    // const type = pokeman.types.map( (type) => type.type.name).join(` `);
     // Set image as url from data
     const image = pokeman.sprites[`front_default`];
     // Set ID as ID from data
@@ -87,6 +87,7 @@ const addPokemonToTeam = (pokeman) => {
     const slot = $(".teamPicker .free").first();
     const figure = slot.find("img");
     const typeCard = slot.find(".typeCard");
+    const typeBorder = slot.find(".typeBorder");
     const idTag = slot.find(".pokeInfo p")
     const titleTag = slot.find(".pokeInfo h3")
     
@@ -94,11 +95,17 @@ const addPokemonToTeam = (pokeman) => {
     idTag.text(`#${id}`);
     titleTag.text(name);
     figure.attr("src", image);
-    // typeCard.addClass(`${type[0].type.name} ${type[0].type.name}-border`);
-    typeCard.addClass(type);
     slot.removeClass("free");
-    // const htmlString =  
 
+    // Check if pokemon has 2 types and change card and border colour accordingly
+    if (type.length < 2) {
+        typeCard.addClass(type[0].type.name);
+        typeBorder.addClass(`${type[0].type.name}-border`);
+
+    } else {
+        typeCard.addClass(type[0].type.name);
+        typeBorder.addClass(`${type[1].type.name}-border`);
+    }
 }
 
 // Function for setting stats of selected stat card

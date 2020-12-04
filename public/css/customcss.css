@@ -49,6 +49,8 @@
     min-width: 20%
 }
 
+/* Pokemon Type Backgrounds */
+
 .normal{
     background-color: #A8A77A;
 }
@@ -119,4 +121,78 @@
 
 .fairy{
     background-color: #D685AD;
+}
+
+/* Pokemon Type Borders */
+
+.normal-border{
+    border-color: #99986e;
+}
+
+.fire-border{
+    border-color: #cf6f27;
+}
+
+.water-border{
+    border-color: #567bcc;
+}
+
+.grass-border{
+    border-color: #619e3c;
+}
+
+.electric-border{
+    border-color: #d4b226;
+}
+
+.ice-border{
+    border-color: #84bfbd;
+}
+
+.fighting-border{
+    border-color: #8f221e;
+}
+
+.poison-border{
+    border-color: #692867;
+}
+
+.ground-border{
+    border-color: #b0954f;
+}
+
+.flying-border{
+    border-color: #826eba;
+}
+
+.psychic-border{
+    border-color: #ba4367;
+}
+
+.bug-border{
+    border-color: #839116;
+}
+
+.rock-border{
+    border-color: #8f7e29;
+}
+
+.ghost-border{
+    border-color: #5c4678;
+}
+
+.dark-border{
+border-colorr: #544235;
+}
+
+.dragon-border{
+    border-color: #4f28ad;
+}
+
+.steel-border{
+    border-color: #9d9db0;
+}
+
+.fairy-border{
+    border-color: #b57092;
 }
