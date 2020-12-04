@@ -71,28 +71,31 @@ const selectPokemonData = async (id) => {
 // Take advanced data from selectPokemonData and use it to modify cards
 const addPokemonToTeam = (pokeman) => {
     // Take type array and create comma spaced string
-    const type = pokeman.types;
-    // const type = pokeman.types.map( (type) => type.type.name).join(` `);
+    // const type = pokeman.types;
+    const type = pokeman.types.map( (type) => type.type.name).join(` `);
     // Set image as url from data
     const image = pokeman.sprites[`front_default`];
     // Set ID as ID from data
     const id = pokeman.id;
     // Set name as name from data and uppercase the string
     const name = pokeman.name[0].toUpperCase() + pokeman.name.slice(1);
-    console.log(type[0].type.name);
+    // console.log(type[0].type.name);
     // Send data to populate stats card
     setStats(pokeman)
     
     // Locate DOM elements of first unpopulated card
     const slot = $(".teamPicker .free").first();
     const figure = slot.find("img");
+    const typeCard = slot.find(".typeCard");
     const idTag = slot.find(".pokeInfo p")
     const titleTag = slot.find(".pokeInfo h3")
     
     // Set values of card info sections and remove free class so it won't be populated
-    idTag.text(`#${id}`)
-    titleTag.text(name)
+    idTag.text(`#${id}`);
+    titleTag.text(name);
     figure.attr("src", image);
+    // typeCard.addClass(`${type[0].type.name} ${type[0].type.name}-border`);
+    typeCard.addClass(type);
     slot.removeClass("free");
     // const htmlString =  
 
