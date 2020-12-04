@@ -49,6 +49,12 @@
     min-width: 20%
 }
 
+.deleteInput{
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50%, -50%);
+}
+
 /* Pokemon Type Backgrounds */
 
 .normal{
@@ -182,7 +188,7 @@
 }
 
 .dark-border{
-border-colorr: #544235;
+    border-color: #544235;
 }
 
 .dragon-border{

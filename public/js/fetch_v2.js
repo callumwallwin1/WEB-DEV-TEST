@@ -36,7 +36,7 @@ const displayPokemon = (pokemon) => {
             <p class="mr-2 text-gray-600">#${pokeman.id}</p>
             <h3 class="font-semibold text-gray-700">${pokeman.name}</h3>
 
-            <a href="https://bulbapedia.bulbagarden.net/wiki/${pokeman.name}_(Pok%C3%A9mon)" class="absolute right-4">
+            <a href="https://bulbapedia.bulbagarden.net/wiki/${pokeman.name}_(Pok%C3%A9mon)" class="absolute right-4" aria-label="Link to ${pokeman.name} Bulbapedia article">
                 <span>
                     <svg width="16" height="16" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.5 1.88272C5.94316 1.88272 1.4375 6.45689 1.4375 12.0982C1.4375 17.7395 5.94316 22.3137 11.5 22.3137C17.0568 22.3137 21.5625 17.7395 21.5625 12.0982C21.5625 6.45689 17.0568 1.88272 11.5 1.88272ZM11.5 20.5807C6.88652 20.5807 3.14453 16.7818 3.14453 12.0982C3.14453 7.4146 6.88652 3.61571 11.5 3.61571C16.1135 3.61571 19.8555 7.4146 19.8555 12.0982C19.8555 16.7818 16.1135 20.5807 11.5 20.5807Z" fill="#929292"/>

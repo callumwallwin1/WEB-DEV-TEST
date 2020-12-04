@@ -12,6 +12,11 @@ $(document).ready(function(){
 
     $(".hideMenuBtn").click(function() {
         $(".menu").toggle();
+        $(".hideMenuBtn").css({'transform' : 'rotate(180deg)'});
     });
+
+    $(".deleteInput").click(function() {
+      $("#search_input").val("");
+  });
 
   });

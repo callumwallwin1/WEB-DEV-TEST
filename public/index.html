@@ -10,7 +10,7 @@
 <body>
     <main class="flex">
         <section class="bg-gray-300 h-screen px-8 py-6 hidden lg:flex flex-col justify-center menu z-50 w-screen lg:w-1/4 min-w fixed inset-y-0 lg:relative overflow-y-hidden">
-            <a href="index.html"><img class="h-16 mb-12 px-10 mx-auto" src="img/pokebuilder.png" alt="Pokebuilder Logo"></a>
+            <a href="index.html" aria-label="Link to Pokebuilder home page"><img class="h-16 mb-12 px-10 mx-auto" src="img/pokebuilder.png" alt="Pokebuilder Logo"></a>
 
             <a href="teams.html" class="bg-white text-gray-800 rounded py-2 mb-8 font-semibold w-full text-center" type="button" aria-label="Visit all teams page">All Teams</a>
             <div class="flex justify-between mb-8">
@@ -18,8 +18,14 @@
                 <a href="signup.html" class="rounded py-2 px-4 w-1/2 font-semibold bg-blue-400 text-white text-center" type="button" aria-label="Sign up page">Sign Up</a>
             </div>
 
-            <form class="mb-8">
+            <form class="mb-8 relative">
                 <input id="search_input" class="w-full rounded py-1 px-4" type="text" placeholder="Search Pokemon..." onkeyup="searchPokemon()" aria-label="Search pokemon name here">
+                <button class="absolute deleteInput">  
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="#C4C4C4"/>
+                        <path d="M8.86771 7.99999L11.5139 5.35999C11.6297 5.24411 11.6948 5.08694 11.6948 4.92306C11.6948 4.75919 11.6297 4.60202 11.5139 4.48614C11.398 4.37026 11.2408 4.30516 11.0769 4.30516C10.9131 4.30516 10.7559 4.37026 10.64 4.48614L8.00001 7.13229L5.36001 4.48614C5.24413 4.37026 5.08697 4.30516 4.92309 4.30516C4.75921 4.30516 4.60205 4.37026 4.48617 4.48614C4.37029 4.60202 4.30519 4.75919 4.30519 4.92306C4.30519 5.08694 4.37029 5.24411 4.48617 5.35999L7.13232 7.99999L4.48617 10.64C4.42849 10.6972 4.38271 10.7653 4.35147 10.8402C4.32022 10.9152 4.30414 10.9957 4.30414 11.0769C4.30414 11.1581 4.32022 11.2386 4.35147 11.3136C4.38271 11.3886 4.42849 11.4566 4.48617 11.5138C4.54338 11.5715 4.61144 11.6173 4.68643 11.6485C4.76142 11.6798 4.84185 11.6959 4.92309 11.6959C5.00433 11.6959 5.08476 11.6798 5.15975 11.6485C5.23474 11.6173 5.30281 11.5715 5.36001 11.5138L8.00001 8.86768L10.64 11.5138C10.6972 11.5715 10.7653 11.6173 10.8403 11.6485C10.9153 11.6798 10.9957 11.6959 11.0769 11.6959C11.1582 11.6959 11.2386 11.6798 11.3136 11.6485C11.3886 11.6173 11.4567 11.5715 11.5139 11.5138C11.5715 11.4566 11.6173 11.3886 11.6486 11.3136C11.6798 11.2386 11.6959 11.1581 11.6959 11.0769C11.6959 10.9957 11.6798 10.9152 11.6486 10.8402C11.6173 10.7653 11.5715 10.6972 11.5139 10.64L8.86771 7.99999Z" fill="#F1F1F1"/>
+                    </svg>
+                </button>  
             </form>
 
             <div class="h-full overflow-y-scroll bg-gray-400 rounded p-4">
@@ -29,7 +35,7 @@
             </div>
         </section>
         <section class="bg-hero-img lg:h-screen flex-1 flex justify-center p-0 xl:p-16 relative">
-            <button class="hideMenuBtn z-50 absolute">
+            <button class="hideMenuBtn z-50 absolute transition-all">
                 <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46.5 23.8573C46.5 36.7643 36.1955 47.2146 23.5 47.2146C10.8045 47.2146 0.5 36.7643 0.5 23.8573C0.5 10.9503 10.8045 0.5 23.5 0.5C36.1955 0.5 46.5 10.9503 46.5 23.8573Z" fill="white" stroke="#4299E1"/>
                     <path d="M24.724 16.3907L17.1146 24L24.724 31.6093L26.6093 29.724L20.8853 24L26.6093 18.276L24.724 16.3907Z" fill="#4299E1"/>
