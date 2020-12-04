@@ -34,9 +34,184 @@
 .hideMenuBtn{
     top: 2.5%;
     left: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+.r-180{
+    transform: rotate(180deg);
 }
 
 .closeBtn{
     top: -2.5%;
     right: -2.5%;
+}
+
+.right-4{
+    right: 3rem;
+}
+
+.min-w{
+    min-width: 380px;
+}
+
+.deleteInput{
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50%, -50%);
+}
+
+.statOn{
+    fill: #F95587;
+}
+
+.statOff{
+    fill: #929292;
+}
+
+/* Pokemon Type Backgrounds */
+
+.normal{
+    background-color: #A8A77A;
+}
+
+.fire{
+    background-color: #EE8130;
+}
+
+.water{
+    background-color: #6390F0;
+}
+
+.grass{
+    background-color: #7AC74C;
+}
+
+.electric{
+    background-color: #F7D02C;
+}
+
+.ice{
+    background-color: #96D9D6;
+}
+
+.fighting{
+    background-color: #C22E28;
+}
+
+.poison{
+    background-color: #A33EA1;
+}
+
+.ground{
+    background-color: #E2BF65;
+}
+
+.flying{
+    background-color: #A98FF3;
+}
+
+.psychic{
+    background-color: #F95587;
+}
+
+.bug{
+    background-color: #A6B91A;
+}
+
+.rock{
+    background-color: #B6A136;
+}
+
+.ghost{
+    background-color: #735797;
+}
+
+.dark{
+    background-color: #705746;
+}
+
+.dragon{
+    background-color: #6F35FC;
+}
+
+.steel{
+    background-color: #B7B7CE;
+}
+
+.fairy{
+    background-color: #D685AD;
+}
+
+/* Pokemon Type Borders */
+
+.normal-border{
+    border-color: #99986e;
+}
+
+.fire-border{
+    border-color: #cf6f27;
+}
+
+.water-border{
+    border-color: #567bcc;
+}
+
+.grass-border{
+    border-color: #619e3c;
+}
+
+.electric-border{
+    border-color: #d4b226;
+}
+
+.ice-border{
+    border-color: #84bfbd;
+}
+
+.fighting-border{
+    border-color: #8f221e;
+}
+
+.poison-border{
+    border-color: #692867;
+}
+
+.ground-border{
+    border-color: #b0954f;
+}
+
+.flying-border{
+    border-color: #826eba;
+}
+
+.psychic-border{
+    border-color: #ba4367;
+}
+
+.bug-border{
+    border-color: #839116;
+}
+
+.rock-border{
+    border-color: #8f7e29;
+}
+
+.ghost-border{
+    border-color: #5c4678;
+}
+
+.dark-border{
+    border-color: #544235;
+}
+
+.dragon-border{
+    border-color: #4f28ad;
+}
+
+.steel-border{
+    border-color: #9d9db0;
+}
+
+.fairy-border{
+    border-color: #b57092;
 }

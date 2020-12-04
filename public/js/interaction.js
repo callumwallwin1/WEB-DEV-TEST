@@ -18,9 +18,10 @@ $(document).ready(function(){
     $(".hideMenuBtn").toggleClass("r-180");
   });
 
-  $(".deleteInput").click(function() {
-    $("#search_input").val("");
-  });
+  // Removed as functionality wasn't acting as intended. Not succesfully resetting search items
+  // $(".deleteInput").click(function() {
+  //   $("#search_input").val("");
+  // });
 
   });
 
