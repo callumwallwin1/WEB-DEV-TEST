@@ -90,8 +90,12 @@ const addPokemonToTeam = (pokeman) => {
     const typeBorder = slot.find(".typeBorder");
     const idTag = slot.find(".pokeInfo p")
     const titleTag = slot.find(".pokeInfo h3")
+
+    if (slot.length <= 0) {
+        alert("There are no available slots. Remove a Pokemon first")
+    } else {
     
-    // Set values of card info sections and remove free class so it won't be populated
+        // Set values of card info sections and remove free class so it won't be populated
     idTag.text(`#${id}`);
     titleTag.text(name);
     figure.attr("src", image);
@@ -105,6 +109,7 @@ const addPokemonToTeam = (pokeman) => {
     } else {
         typeCard.addClass(type[0].type.name);
         typeBorder.addClass(`${type[1].type.name}-border`);
+    }
     }
 }
 
