@@ -7,6 +7,13 @@
     --spdSize: 0%;
 }
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
 .hpBar{
     width: var(--hpSize);
 }
