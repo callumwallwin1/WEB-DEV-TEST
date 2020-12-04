@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     $(".hideMenuBtn").click(function() {
         $(".menu").toggle();
-        $(".hideMenuBtn").css({'transform' : 'rotate(180deg)'});
+        $(".hideMenuBtn").toggleClass("r-180");
     });
 
     $(".deleteInput").click(function() {
@@ -20,3 +20,24 @@ $(document).ready(function(){
   });
 
   });
+
+  // Function for searching and filtering pokemon by name
+function searchPokemon() {
+  // Declare variables
+    let input, filter, poke_container, pokemon_items, a, i, txtValue;
+    input = document.getElementById('search_input');
+    filter = input.value.toUpperCase();
+    poke_container = document.getElementById("poke_container");
+    pokemon_items = poke_container.querySelectorAll('.pokemon');
+  
+  // Loop through all pokemon and hide those who don't match the search query
+    for (i = 0; i < pokemon_items.length; i++) {
+      a = pokemon_items[i].getElementsByTagName("h3")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          pokemon_items[i].style.display = "";
+      } else {
+          pokemon_items[i].style.display = "none";
+      }
+    }
+}

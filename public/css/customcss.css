@@ -34,6 +34,11 @@
 .hideMenuBtn{
     top: 2.5%;
     left: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+.r-180{
+    transform: rotate(180deg);
 }
 
 .closeBtn{
@@ -46,7 +51,7 @@
 }
 
 .min-w{
-    min-width: 20%
+    min-width: 380px;
 }
 
 .deleteInput{
