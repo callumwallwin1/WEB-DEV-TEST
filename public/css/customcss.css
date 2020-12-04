@@ -60,6 +60,14 @@
     transform: translate(-50%, -50%);
 }
 
+.statOn{
+    fill: #F95587;
+}
+
+.statOff{
+    fill: #929292;
+}
+
 /* Pokemon Type Backgrounds */
 
 .normal{

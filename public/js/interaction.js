@@ -1,22 +1,25 @@
 $(document).ready(function(){
     
-    $(".statBtn").click(function(){
-        $(".statCard").toggleClass("hidden");
-        $(".statCard").toggleClass("flex");
-      });
+  $(".statBtn").click(function(){
+    $(this).parent().siblings().find(".statCard").toggleClass("hidden flex");
+    $(this).children().find("svg").toggleClass("statOn statOff");
+    
+    // Option to hide and show ALL stat cards
+    // $(".statCard").toggleClass("hidden flex");
+  });
 
-    $(".closeBtn").click(function(e) {
-        removePokemon($(this).parent());
-        e.preventDefault();
-    });
+  $(".closeBtn").click(function(e) {
+    removePokemon($(this).parent());
+    e.preventDefault();
+  });
 
-    $(".hideMenuBtn").click(function() {
-        $(".menu").toggle();
-        $(".hideMenuBtn").toggleClass("r-180");
-    });
+  $(".hideMenuBtn").click(function() {
+    $(".menu").toggle();
+    $(".hideMenuBtn").toggleClass("r-180");
+  });
 
-    $(".deleteInput").click(function() {
-      $("#search_input").val("");
+  $(".deleteInput").click(function() {
+    $("#search_input").val("");
   });
 
   });
