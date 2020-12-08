@@ -7,12 +7,13 @@ $(document).ready(function(){
     // Option to hide and show ALL stat cards
     // $(".statCard").toggleClass("hidden flex");
   });
-
+  // Button for reomving pokemon from team selection - Adds "free" class
   $(".closeBtn").click(function(e) {
     removePokemon($(this).parent());
     e.preventDefault();
   });
 
+  // Button for toggling pokemon selection menus
   $(".hideMenuBtn").click(function() {
     $(".menu").toggle();
     $(".hideMenuBtn").toggleClass("r-180");
