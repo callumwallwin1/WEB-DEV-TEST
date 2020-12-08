@@ -3,7 +3,14 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [    
+    './public/index.html',
+    './public/login.html',
+    './public/teams.html',
+    './public/signup.html'],
+  },
   theme: {
 
     extend: {
