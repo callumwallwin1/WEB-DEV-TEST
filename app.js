@@ -26,7 +26,8 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  res.send("404 - This page does not exist");
+  // next(createError(404));
 });
 
 // error handler
@@ -39,10 +40,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.get('*', function (req, res) {
-  res.send("404 - Page does not exist!");
-})
 
 app.listen(port, function() {
   console.log("Server is listening")
