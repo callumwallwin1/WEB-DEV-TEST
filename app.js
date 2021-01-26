@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.get(function (req, res) {
+app.get('*', function (req, res) {
   res.send("404 - Page does not exist!");
 })
 
