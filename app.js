@@ -40,8 +40,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// app.listen(3000, function() {
-//   console.log("Server is listening")
-// })
+app.get(function (req, res) {
+  res.send("404 - Page does not exist!");
+})
+
+app.listen(port, function() {
+  console.log("Server is listening")
+})
 
 module.exports = app;
