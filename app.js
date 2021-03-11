@@ -30,6 +30,18 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+app.get('/teams', (req, res) => {
+  res.render('teams')
+})
+
+app.get('/login', (req, res) => {
+  res.render('login')
+})
+
+app.get('/signup', (req, res) => {
+  res.render('signup')
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   res.send("404 - This page does not exist");
