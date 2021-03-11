@@ -1,9 +1,12 @@
 const createError = require('http-errors');
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const port = 3000;
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:27017/profiles";
 
 
 // const indexRouter = require('./routes/index');
@@ -21,6 +24,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
+
+var db;
+
+MongoClient.connect(url, function(err, database) {
+  if (err) throw err;
+  db = database;
+  app.listen(8080);
+  console.log('listening on 8080');
+});
 
 // app.use('/', indexRouter);
 // app.use('/teams', teamsRouter);
