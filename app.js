@@ -6,9 +6,9 @@ const logger = require('morgan');
 const port = 3000;
 
 
-const indexRouter = require('./routes/index');
-const teamsRouter = require('./routes/teams');
-const usersRouter = require('./routes/users');
+// const indexRouter = require('./routes/index');
+// const teamsRouter = require('./routes/teams');
+// const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -22,9 +22,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
-app.use('/', indexRouter);
-app.use('/teams', teamsRouter);
-app.use('/users', usersRouter);
+// app.use('/', indexRouter);
+// app.use('/teams', teamsRouter);
+// app.use('/users', usersRouter);
+
+app.get('/', (req, res) => {
+  res.render('views/index')
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
