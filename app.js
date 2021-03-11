@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 // app.use('/users', usersRouter);
 
 app.get('/', (req, res) => {
-  res.render('views/index')
+  res.render('index')
 })
 
 // catch 404 and forward to error handler
