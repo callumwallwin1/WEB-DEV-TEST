@@ -60,12 +60,12 @@ app.post('/dologin', function(req, res) {
   var uname = req.body.username;
   var pword = req.body.password;
 
-  db.collection('users').findOne({"login.username":uname}, function(err, result) {
+  db.collection('users').findOne({"username":uname}, function(err, result) {
     if (err) throw err;
 
     if(!result){res.redirect('/login');return}
 
-    if(result.login.password == pword){ 
+    if(result.password == pword){ 
       req.session.loggedin = true; 
       req.session.currentUser = uname; 
       res.redirect('/') 
