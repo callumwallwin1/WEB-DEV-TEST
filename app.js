@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const port = 3000;
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/profiles";
+const url = "mongodb://localhost:27017/pokebuilder"; // TRY AGAIN HERE
 
 // const indexRouter = require('./routes/index');
 // const teamsRouter = require('./routes/teams');
